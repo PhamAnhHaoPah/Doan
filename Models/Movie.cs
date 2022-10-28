@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations; 
 using System.Threading.Tasks ; 
 using System.Linq ; 
+using System.ComponentModel.DataAnnotations.Schema ; 
 namespace webapp.Models
 {
     public class Movie
@@ -22,7 +23,11 @@ namespace webapp.Models
         public int CinemaId {get;set ; }
         [ForeignKey("CinemaId")]
         public Cinema Cinema {get ; set ; }
+        //Producer
+        public int ProducerId {get;set ; }
+        [ForeignKey("ProducerId")]
+        public Producer Producer {get ; set ; }
 
-
+        
     }
 }
